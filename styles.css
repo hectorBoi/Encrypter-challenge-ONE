@@ -1,0 +1,58 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    color: #0A3871;
+    padding:5px 5%;
+  }
+
+.encrypter{
+    border-style: solid;
+    border-color: #0A3871;
+    border-width: 2px;
+}
+
+header h1{
+    font-size: 3em;
+    padding: 20px 0;
+}
+
+.encrypter{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.encrypter > section{
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #FF0000;
+}
+.input-field{
+    width: 50%;
+    display: inline-block;
+}
+
+.output-field{
+    width: 30%;
+    display: inline-block;
+}
+
+.text-input{
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+.button-group{
+    margin: 0 auto;
+    border-style: solid;
+    text-align: center;
+}
+
+.input-buttons{
+    margin: 5px;
+    padding: 15px 25px;
+}
+
