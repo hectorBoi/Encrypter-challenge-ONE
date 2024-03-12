@@ -16,24 +16,32 @@
     <header>
         <h1>Text Encrypter</h1>
     </header>
-
     <div class="encrypter">
         <section class="input-field">
-            <textarea placeholder="Input the text to Encrypt..." class="text-input"></textarea>
+            <textarea placeholder="Input the text to Encrypt..." class="invisible-textarea"></textarea>
             <div class="button-group">
-                <input class="input-buttons"type="button" value="Encrypt">
-                <input class="input-buttons" type="button" value="Decrypt">
+                <input class="highlighted-button"type="button" value="Encrypt">
+                <input class="standard-button" type="button" value="Decrypt">
             </div>
         </section>
 
         <section class="output-field">
-            <textarea placeholder="No text to encrypt yet" class="text-input"></textarea>
-            <div class="button-group">
-                <input class="input-buttons"type="button" value="Copy">
+            <textarea readonly placeholder="No text to encrypt yet" class="standard-textarea"></textarea>
+            <figure>
+                <img src="images/cat-empty-bowls.jpg">
+                <figcaption>No text was found to encrypt</figcaption>
+            </figure>
+            <div class="button-group" id="copy-button">
+                <input class="standard-button" type="button" value="Copy">
             </div>
+            
         </section>
     </div>
 
+    <footer>
+        <h1>Made by Hector Emiliano Zepeda Gonzalez
+            Check on <a href="https://github.com/hectorBoi/Encrypter-challenge-alura">Github</a></h1>
 
+    </footer>
 </body>
 </html>

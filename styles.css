@@ -4,18 +4,18 @@ body {
     font-weight: 450;
     font-style: normal;
     color: #0A3871;
-    padding:5px 5%;
+    background-color: #F3F5FC;
+    width: 100%;
   }
 
 .encrypter{
-    border-style: solid;
-    border-color: #0A3871;
-    border-width: 2px;
+    border-style: none;
+    padding:5px 5%;
 }
 
 header h1{
     font-size: 3em;
-    padding: 20px 0;
+    padding: 20px 5%;
 }
 
 .encrypter{
@@ -24,35 +24,110 @@ header h1{
     justify-content: space-around;
 }
 
-.encrypter > section{
-    margin-top: 10px;
-    padding: 20px;
-    background-color: #FF0000;
+.output-field{
+    width: 40%;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
 }
+
+figure{
+    width: 100%;
+    height: 60%;
+    padding: 5% 0 0 0;
+}
+
+img{
+    max-width: 60%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+}
+
+figcaption{
+    margin-top: 10px;
+}
+
+#copy-button{
+    position: absolute;
+    bottom: 0;
+}
+
 .input-field{
     width: 50%;
-    display: inline-block;
 }
 
-.output-field{
-    width: 30%;
-    display: inline-block;
-}
-
-.text-input{
+.invisible-textarea, .standard-textarea{
     display: block;
     width: 100%;
     height: 400px;
+    resize: none;
+    border-style: none; 
+    border-color: Transparent; 
+    overflow: auto;
+    padding: 1em;    
+}
+
+.invisible-textarea, .standard-textarea:focus{
+    outline: none;
+}
+
+.invisible-textarea{
+    background: none;
+}
+
+.standard-textarea{
+    background: white;
+    border-radius: 15px;
+    display: none;
 }
 
 .button-group{
     margin: 0 auto;
     border-style: solid;
-    text-align: center;
+    width: calc(100% + 2em);
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
-.input-buttons{
-    margin: 5px;
-    padding: 15px 25px;
+.standard-button, .highlighted-button{
+    padding: 15px 45px;
+    border-radius: 15px;
+    border-color:#0A3871;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+}
+
+.standard-button{
+    background: transparent;
+    color: #0A3871
+}
+
+.highlighted-button{
+    background: #0A3871;
+    color:#D8DFE8;
+}
+
+footer{
+    border-style: dashed;
+    position: absolute;
+    width: 100%;
+    height:100px;
+    bottom: 0; /* stick to bottom */
+    background-color: #0A3871;
+    color: #D8DFE8;
+    text-align: center;
+    padding: 25px 0;
+}
+
+footer>h1>a:link{
+    color: #D8DFE8;
+}
+
+footer>h1>a:visited{
+    color: #D8DFE8;
 }
 
