@@ -159,12 +159,13 @@ footer{
     border-radius: 15px;
     padding: 1em;
     display: none;
+    box-shadow: 2px 3px 5px black;
+    /*box-shadow: -3px -3px 5px black;*/
 }
 
 #about-card{
     text-align: center;
     font-size: 15px;
-
 }
 
 #information-one{
