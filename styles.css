@@ -6,17 +6,21 @@ body {
     color: #0A3871;
     background-color: #F3F5FC;
     width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
   }
 
 .spaced-horizontal-bar{
     display: flex;
     justify-content: flex-start;
     flex-flow: nowrap;
+    align-items: center;
 }
 
 #about-button-group{
     width: fit-content;
     margin-left: 0;
+    margin-right: 0;
 }
 
 #about-button{
@@ -26,6 +30,15 @@ body {
 header h1{
     font-size: 3em;
     padding: 20px 5%;
+}
+
+#star-button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:10px;
+    height: 55px;
 }
 
 .encrypter{
@@ -112,6 +125,10 @@ figcaption{
     font-size: 14px;
 }
 
+.standard-button, .highlighted-button:hover{
+    cursor: pointer;
+}
+
 .standard-button{
     background: transparent;
     color: #0A3871
@@ -124,7 +141,7 @@ figcaption{
 
 footer{
     width: 100%;
-    height:100px;
+    height:calc(100vh - 85%);
     background-color: #0A3871;
     color: #D8DFE8;
     text-align: center;
@@ -156,11 +173,11 @@ footer{
     margin-bottom: 10px;
 }
 
-footer>h1>a:link{
+a:link{
     color: #D8DFE8;
 }
 
-footer>h1>a:visited{
+a:visited{
     color: #D8DFE8;
 }
 
