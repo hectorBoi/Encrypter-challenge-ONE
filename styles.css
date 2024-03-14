@@ -167,6 +167,14 @@ footer{
 
 }
 
+#information-one{
+    margin-top: 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
 .card-close-button{
     position: relative;
     left:90%;

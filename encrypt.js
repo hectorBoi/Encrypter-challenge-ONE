@@ -7,14 +7,15 @@ function encrypt() {
     
     // Get the text content of the textarea
     var text = inputTextarea.value;
+    text = text.replace(/[&\/\\#+$~%.'":*<>{}]/g, '');
+    text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    text = text.toLowerCase();
 
     //Verify if the retrieved string is empty
     if(text === ""){
         figure.style.display = "block"
         outputTextarea.style.display = "none";
     }else{
-        text = text.replace(/[&\/\\#+$~%.'":*<>{}]/g, '');
-        text = text.toLowerCase();
         figure.style.display = "none"
         outputTextarea.style.display = "block";
         outputTextarea.value = encryptor(text);
@@ -38,8 +39,6 @@ function decrypt(){
         figure.style.display = "block"
         outputTextarea.style.display = "none";
     }else{
-        text = text.replace(/[&\/\\#+$~%.'":*<>{}]/g, '');
-        text = text.toLowerCase();
         figure.style.display = "none"
         outputTextarea.style.display = "block";
         outputTextarea.value = decryptor(text);
