@@ -2,6 +2,7 @@
 
 This is a simple website made with **HTML, CSS and Javascript** which receives text through a textarea and follows some rules in order to give as an output a text which is very lightly encrypted.
 
+![](https://github.com/hectorBoi/Encrypter-challenge-alura/blob/main/images/Website-Image.png)
 ## The encryption Rules
  - La letra "e" es convertida para "enter"
  - La letra "i" es convertida para "imes"  
