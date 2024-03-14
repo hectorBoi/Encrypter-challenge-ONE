@@ -10,38 +10,57 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Text Encrypter</title>
+<script src="encrypt.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Text Encrypter</h1>
-    </header>
-    <div class="encrypter">
-        <section class="input-field">
-            <textarea placeholder="Input the text to Encrypt..." class="invisible-textarea"></textarea>
-            <div class="button-group">
-                <input class="highlighted-button"type="button" value="Encrypt">
-                <input class="standard-button" type="button" value="Decrypt">
+    <header id="the-header">
+        <div class="spaced-horizontal-bar">
+            <h1>Text Encrypter</h1>
+            <div class="button-group" id="about-button-group">
+                <input class="standard-button" type="button" value="About the Encrypter" id="about-button" onclick="displayAbout()">
             </div>
+        </div>
+    </header>
+    <div class="encrypter" id="my-encrypter">
+        <section class="input-field">
+            <textarea placeholder="Input the text to Encrypt..." class="invisible-textarea" id="textarea-to-encrypt"></textarea>
+            <div class="button-group">
+                <input class="highlighted-button" type="button" value="Encrypt" id="encrypt-button"onclick="encrypt()">
+                <input class="standard-button" type="button" value="Decrypt" onclick="decrypt()">
+            </div>
+            
         </section>
 
         <section class="output-field">
-            <textarea readonly placeholder="No text to encrypt yet" class="standard-textarea"></textarea>
-            <figure>
+            <textarea readonly placeholder="No text to encrypt yet" class="standard-textarea" id="textarea-encrypted"></textarea>
+            <figure id="no-text-figure">
                 <img src="images/cat-empty-bowls.jpg">
                 <figcaption>No text was found to encrypt</figcaption>
             </figure>
-            <div class="button-group" id="copy-button">
-                <input class="standard-button" type="button" value="Copy">
+            <div class="button-group" id="copy-button-group">
+                <input class="standard-button" id="copy-button" type="button" value="Copy" onclick="copyToClipboard()">
             </div>
             
         </section>
     </div>
+    <div class="popup-card" id="about-card-container">
+        <input type="button" value="x" class="card-close-button" onclick="closeCard()">
+        <h1 id="about-card">
+            The encrypter follows the next rules using a simple switch statement.<br>
+            <br>
+            La letra "e" es convertida para "enter"<br>
+            La letra "i" es convertida para "imes"<br>
+            La letra "a" es convertida para "ai"<br>
+            La letra "o" es convertida para "ober"<br>
+            La letra "u" es convertida para "ufat"<br>
+        </h1>
+    </div>
 
-    <footer>
+
+    <footer id="myfooter">
         <h1>Made by Hector Emiliano Zepeda Gonzalez
             Check on <a href="https://github.com/hectorBoi/Encrypter-challenge-alura">Github</a></h1>
-
     </footer>
 </body>
 </html>
